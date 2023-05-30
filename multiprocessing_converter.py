@@ -10,14 +10,14 @@ import csv
 
 mp3_files_path = '/home/sergey/Python projects/RU_NER/CommonVoice_ru/ru/working_copy'
 output_file = '/home/sergey/Python projects/RU_NER/converted_with_multiprocessing.csv'
-save_interval = 20
+save_interval = 500
 
 model = vosk.Model('/home/sergey/Python projects/RU_NER/vosk-model-ru-0.42')
 rec = vosk.KaldiRecognizer(model, 48000)
 
 
 def convert_and_transcribe(mp3_file):
-    index = os.path.splitext(os.path.basename(mp3_file))[0].split('_')[3]
+    index = os.path.basename(mp3_file).split('_')[3][:-4]
     wav = mp3_file.split('.')[0]+'.wav'
     audio = AudioSegment.from_mp3(mp3_file)
     audio = audio.set_channels(1)
