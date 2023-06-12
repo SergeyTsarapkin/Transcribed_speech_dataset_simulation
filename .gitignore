@@ -1,0 +1,9 @@
+vosk-model-ru-0.42/
+old/
+audiobooks/
+CommonVoice_ru/
+Untitled.ipynb
+.ipynb_checkpoints
+*.tsv
+*.txt
+*.parquet
