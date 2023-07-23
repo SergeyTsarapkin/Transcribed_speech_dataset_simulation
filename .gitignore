@@ -3,7 +3,7 @@ old/
 audiobooks/
 CommonVoice_ru/
 Untitled.ipynb
-.ipynb_checkpoints
+*.ipynb_checkpoints/
 *.tsv
 *.txt
 *.parquet
